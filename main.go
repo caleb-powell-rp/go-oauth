@@ -18,6 +18,7 @@ func main() {
 			TokenURL: "https://auth.rpxapps.com/auth/realms/rpx/protocol/openid-connect/token",
 		},
 		RedirectURL: "http://localhost:8080/hello",
+		Scopes:      []string{"openid", "profile", "email"},
 	}
 
 	url := conf.AuthCodeURL("state", oauth2.AccessTypeOffline)
